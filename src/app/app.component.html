@@ -1,0 +1,42 @@
+<div style="text-align:center">
+<h2 class="bounce animated infinite">*Today We Learn Service Topic*</h2>
+<!-- <h2>SOMNATH</h2> -->
+<!-- <h2 class="rotateInUpLeft animated infinite">SHELKE</h2> -->
+</div>
+{{title}}
+<h2>Student Data</h2>
+<h3>Name:{{StudObj.name}}</h3>
+<h3>City:{{StudObj.city}}</h3>
+<h3>Age:{{StudObj.age}}</h3>
+<input type="text" [(ngModel)]="StudId">
+<button (click)="GetStudentDetail()">Get Student Detail</button>
+
+<hr>
+<hr>
+<div style="text-decoration:magenta">
+{{title1}}
+<h3>Name:{{CountryObj.name}}</h3>
+<h3>Capital:{{CountryObj.capital}}</h3>
+<h3>Currency:{{CountryObj.currencies[0].symbol}}</h3>
+<input type="text" [(ngModel)]="CN">
+<button (click)=GetCountryInfo()>Country Detail</button>
+<img src={{CountryObj.flag}} width="100px" height="100px">
+</div>
+<hr>
+<hr>
+<h3>POST RESPONS DATA</h3>
+<h3>Name:<span style="font-size:18px; color:red">{{data.name}}</span></h3>
+<h3>Job:<span style="font-size:18px; color:red">{{data.roll}}</span></h3>
+<h3>City:<span style="font-size:18px; color:red">{{data.id}}</span></h3>
+<h3>Id:<span style="font-size:18px; color:red">{{data.createdAt}}</span></h3>
+{{data|json}}
+<button (click)=getdata()>profile</button>
+
+<!-- Employee service -->
+
+<h2>Employee Data</h2>
+<h3>Name:{{empobj.name}}</h3>
+<h3>City:{{empobj.city}}</h3>
+<h3>Age:{{empobj.age}}</h3>
+<input type="text" [(ngModel)]="empid">
+<button (click)="DisplayEmployeeData()">Get Employee Detail</button>
